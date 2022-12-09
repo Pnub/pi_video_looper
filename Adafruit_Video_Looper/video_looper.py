@@ -396,6 +396,10 @@ class VideoLooper:
                     self._print("b was pressed. jumping back...")
                     self._playlist.seek(-1)
                     self._player.stop(3)
+                if event.key == pygame.K_PLUS:
+                    self._print("+ was pressed. volume up...")
+                if event.key == pygame.K_MINUS:
+                    self._print("- was pressed. volume down...")
                     
                     
 
@@ -486,6 +490,7 @@ class VideoLooper:
 # Main entry point.
 if __name__ == '__main__':
     print('Starting Adafruit Video Looper.')
+    print('Ben fork code')
     # Default config path to /boot.
     config_path = '/boot/video_looper.ini'
     # Override config path if provided as parameter.
